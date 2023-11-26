@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 1.5rem;
+            margin: 1rem;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        button {
+            background-color: yellowgreen;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+        footer {
+            background-color: green;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magazin Online</h1>
+    </header>
+    
+    <nav>
+        <a href="#apicultura">Apicultura</a>
+        <a href="#lactate">Lactate</a>
+        <a href="#panificatie">Panificatie</a>
+        <a href="#carne">Carne</a>
+        <a href="#fructe si legume">Fructe și Legume</a>
+    </nav>
+
+    
+        <section id="apicultura" class="product">
+            <h2>Miere</h2>
+            <img src="miere.jpg" alt="miere" style="max-width: 100%;">
+            
+            <p> Preț: 25.99 lei/ borcan</p>
+            <button onclick="addToCart('Miere')">Adaugă în Coș</button>
+        </section>
+
+        <section id="apicultura" class="product">
+            <h2>Fagure</h2>
+            <img src="fagure.jpg" alt="miere" style="max-width: 100%;">
+            
+            <p> Preț: 49.99 lei/ 500 gr</p>
+            <button onclick="addToCart('Fagure')">Adaugă în Coș</button>
+        </section>
+
+        <section id="apicultura" class="product">
+            <h2>Propolis</h2>
+            <img src="propolis.jpg" alt="miere" style="max-width: 100%;">
+            
+            <p> Preț: 60.99 lei/ 100 ml</p>
+            <button onclick="addToCart('Propolis')">Adaugă în Coș</button>
+        </section>
+    
+        <section id="lactate" class="product">
+            <h2> Lapte</h2>
+            <img src="lapte.jpg" alt="miere" style="max-width: 100%;">
+            <p> Preț: 10.49 lei/ l</p>
+            <button onclick="addToCart('Lapte')">Adaugă în Coș</button>
+        </section>
+
+        <section id="lactate" class="product">
+            <h2>Telemea</h2>
+           
+            <img src="telemea.jpg" alt="miere" style="max-width: 100%;">
+            <p>Lapte, telemea. Preț: 24.49 lei/ kg</p>
+            <button onclick="addToCart('Telemea')">Adaugă în Coș</button>
+        </section>
+    
+        <section id="panificatie" class="product">
+            <h2>Covrig</h2>
+            <img src="covrig.jpg" alt="miere" style="max-width: 100%;">
+           
+            <p>C Preț: 2.99 lei/ buc.</p>
+            <button onclick="addToCart('Covrig')">Adaugă în Coș</button>
+        </section>
+
+        <section id="panificatie" class="product">
+            <h2>Cozonac</h2>
+            <img src="cozonac.jpg" alt="miere" style="max-width: 100%;">
+            <p>  Preț: 25.99 lei/ buc.</p>
+            <button onclick="addToCart('Cozonac')">Adaugă în Coș</button>
+        </section>
+    
+    
+        <section id="carne" class="product">
+            <h2>Carne tocata</h2>
+            <img src="carne tocata.jpg" alt="miere" style="max-width: 100%;">
+            
+            <p> Preț: 24.75 lei/ kg</p>
+            <button onclick="addToCart('Carne tocata')">Adaugă în Coș</button>
+        </section>
+
+
+        <section id="carne" class="product">
+            <h2>ceafa</h2>
+            
+            <img src="ceafa.jpg" alt="miere" style="max-width: 100%;">
+            
+            <p> Preț: 27.75 lei/ kg</p>
+            <button onclick="addToCart('Ceafa')">Adaugă în Coș</button>
+        </section>
+
+        <section id="carne" class="product">
+            <h2>Carnati</h2>
+            
+            <img src="carnati.jpg" alt="miere" style="max-width: 100%;">
+            <p> Preț: 28.75 lei/ kg</p>
+            <button onclick="addToCart('Carnati')">Adaugă în Coș</button>
+        </section>
+    
+        <section id="fructe-legume" class="product">
+            <h2>Mere</h2>
+            <img src="mere.jpg" alt="miere" style="max-width: 100%;">
+            
+            <p> Preț: 5.99 lei/ kg</p>
+            <button onclick="addToCart('Mere')">Adaugă în Coș</button>
+        </section>
+
+        <section id="fructe-legume" class="product">
+            <h2>Rosii</h2>
+            
+            <img src="rosii.jpg" alt="miere" style="max-width: 100%;">
+            <p> Preț: 12.99 lei/ kg</p>
+            <button onclick="addToCart('Rosii')">Adaugă în Coș</button>
+        </section>
+
+        <section id="fructe-legume" class="product">
+            <h2>Morcovi</h2>
+            
+            <img src="morcovi.jpg" alt="miere" style="max-width: 100%;">
+           
+            <p> Preț: 5.99 lei/ kg</p>
+            <button onclick="addToCart('Morcovi')">Adaugă în Coș</button>
+        </section>
+    
+        <footer>
+            &copy; 2023 Magazin Online. Toate drepturile rezervate.
+        </footer>
+    
+        <script>
+            function addToCart(productName) {
+                alert(productName + " adăugat în coș!");
+            }
+        </script>
+    </body>
+    </html>
+
+
+    !DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin Online</title>
+    <style>
+        #cart {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 0 0 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addToCart('Produs 1')">Adaugă în Coș</button>
+
+    <div id="cart" onclick="showCart()">
+        🛒 Coș de Cumpărături
+        <ul id="cartItems" style="display: none;"></ul>
+    </div>
+
+    <script>
+        function addToCart(product) {
+            // Obține elementul listei de cumpărături
+            var cartItems = document.getElementById("cartItems");
+
+            // Creează un element listă pentru produs
+            var listItem = document.createElement("li");
+            listItem.appendChild(document.createTextNode(product));
+
+            // Adaugă elementul la lista de cumpărături
+            cartItems.appendChild(listItem);
+
+            // Afișează lista de cumpărături dacă nu este deja afișată
+            document.getElementById("cart").style.backgroundColor = "#ffcc00";
+            document.getElementById("cartItems").style.display = "block";
+        }
+
+        function showCart() {
+            // Implementează acțiunile pe care le dorești când utilizatorul dă clic pe coșul de cumpărături
+            alert("Afișează lista de cumpărături sau alte acțiuni aici!");
+        }
+    </script>
+</body>
+</html>
+    
+
